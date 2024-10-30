@@ -1,0 +1,41 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Community" %}
+{% set pageName = "Our community" %}
+{% set pageDescription = "Our people, meetups, and how we're developing product management capability across the department."%}
+{% set sidenav = "community"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'community/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-body">
+        <p>The DfE product management community of practice is a supportive, professional group who share, learn and develop together.</p>  
+
+        <p>Our vision is that DfE will be the leader for product management in government.</p>
+          
+        <p>We regularly come together for meetups and we have an active and friendly Slack channel.</p>
+          
+        <p>Our mission patch is a goat, on top of a mountain looking towards the North Star. As product managers, we provide the North Star for our teams to follow. The goat represents that product managers should be tenacious, and sometimes they have to navigate rocky landscapes.</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

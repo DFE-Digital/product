@@ -1,0 +1,51 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Community" %}
+{% set pageName = "Meetups" %}
+{% set pageDescription = "We regularly meet as a community, to learn together and spend time with other product managers."%}
+{% set sidenav = "meetups"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'community/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-body">
+       <p>We meet online as a community of product managers every Thursday from 1:30pm to 2:30pm. Contact <a href="/community/leadership-team">Head of profession for product management Debbie Blanchard</a> to get the invite.</p>
+       
+       <p>We have different types of meetups including:</p> 
+        <ul>
+        <li>show and tells - where DfE product managers share what they are currently working on</li>
+        <li>guest speakers - who may be from outside of DfE or a member of a different profession</li>
+        <li>action learning - where we work on something together as a community</li>
+        <li>content conclave - where as a group we discuss our thoughts on a piece of content about product management</li>
+        <li>joint sessions - where we join up with other profession communities</li>
+        </ul>
+        </div>
+        
+        <div class="govuk-heading-l">
+            <H2>Get involved with community of practice meetups</H2>
+        </div>
+
+        <div class="govuk-body">
+       <p>We're always looking for product managers to share their work at meetups, and to make suggestions for topics for meetups. Contact <a href="/community/leadership-team">Head of profession for product management Debbie Blanchard</a> to get involved.</p> 
+        </div>
+    </div>
+  </div>
+{% endblock %}

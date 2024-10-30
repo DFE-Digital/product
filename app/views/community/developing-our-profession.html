@@ -1,0 +1,53 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Community" %}
+{% set pageName = "Developing our profession" %}
+{% set pageDescription = "Our vision for the product management practice at DfE, and how we'll get there. ."%}
+{% set sidenav = "developingourprofession"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'community/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-body">
+      <p>Our vision is that the Department for Education (DfE) will be the leader for product management in government. We want to enable product managers to:</p>
+      <ul>
+      <li>learn skills and develop their careers, and support them as they work</li>
+      <li>deliver products and services that solve the right problems and add value for users</li>
+      <li>share their successes, their failures and their learnings in a safe space</li>
+      </ul>
+        </div>
+        
+        <div class="govuk-heading-l">
+          <H2>How we'll achieve this</H2>
+        </div>
+        <div class="govuk-body"></div>
+        <p>We've already introduced values and principles for the profession. We'll continue to learn from good practice and mature how the department thinks about product management.</p>  
+        <p>Our Head of profession for product management, Debbie Blanchard, currently has 4 key priorities.</p>
+        <ol>
+        <li>Conduct capability assessments with all product managers to help inform content of community meetups and formal learning opportunities.</li>
+        <li>Create a DfE product manual to provide information for product managers, including good practice.</li>
+        <li>Standardise the profession by bringing consistency to roles and job descriptions.</li>
+        <li>Work with cross government colleagues on the capability framework and learning pathways for product managers.</li>
+        </ol>  
+      </div>  
+    </div>
+  </div>
+{% endblock %}

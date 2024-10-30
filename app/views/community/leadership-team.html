@@ -1,9 +1,9 @@
 {% extends "layouts/full.html" %}
 
-{% set selectedNav = "Principles" %}
-{% set pageName = "Principle 1" %}
-{% set pageDescription = ""%}
-{% set sidenav = "principle1"%}
+{% set selectedNav = "Community" %}
+{% set pageName = "Leadership team" %}
+{% set pageDescription = "Our product management profession leadership team, what they do, and how to contact them."%}
+{% set sidenav = "leadershipteam"%}
 
 {% block hero %}
 <section class="dfe-page-header">
@@ -23,12 +23,12 @@
 <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-quarter">
-        {%include 'principles/_sidenav.html'%}
+  {%include 'community/_sidenav.html'%}
       </div>
       <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-l">Overview of principle 1</h2>
-            <p class="govuk-body">This is where we will tell you things</p>
-      </div>
+      <div class="govuk-body">
+      <p></p>
+        </div>
     </div>
   </div>
 {% endblock %}
