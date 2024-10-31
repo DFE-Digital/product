@@ -1,0 +1,36 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Guidance" %}
+{% set pageName = "Guidance" %}
+{% set pageDescription = "Guidance for product managers at the Department for Education."%}
+{% set sidenav = "guidance"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'guidance/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+      <p class="govuk-body">This guidance has been written by members of the product management community. The guidance links to our principles, and describes good practice.</p>  
+      <p class="govuk-body">We encourage and welcome feedback on any of this content, using the link at the bottom of each page.</p>
+      <p class="govuk-body">Any DfE product manager can get involved in creating guidance content to support the community. Contact the Head of profession for product management to volunteer. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

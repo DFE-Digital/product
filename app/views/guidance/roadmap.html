@@ -1,0 +1,48 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Guidance" %}
+{% set pageName = "Making your roadmap" %}
+{% set pageDescription = "How to make a roadmap to show a prioritised sequence of outcomes. "%}
+{% set sidenav = "roadmap"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'guidance/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+      <p class="govuk-body">A product roadmap outlines the specific outcomes to achieve, and the priority order in which to achieve them. You should make sure that each item on your roadmap links back to your strategy.</p>
+      <p class="govuk-body">You should involve your team and stakeholders in creating your roadmap, which you can do by running a workshop.</p>
+      <p class="govuk-body">You should share your roadmap regularly - such as in show and tells and meetings with stakeholders.</p>
+
+      <H2 class="govuk-heading-l">Outcomes not features</H2>
+      
+      <H2 class="govuk-heading-l">Designing your roadmap</H2>
+
+      <H2 class="govuk-heading-l">Times and dates on roadmap</H2>
+
+      <H2 class="govuk-heading-l">Roadmaps change</H2>
+
+      <H2 class="govuk-heading-l">Example roadmap</H2>
+
+      <H2 class="govuk-heading-l">Further reading</H2>
+      
+      </div>
+    </div>
+  </div>
+{% endblock %}
