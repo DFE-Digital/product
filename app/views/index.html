@@ -2,9 +2,74 @@
 
 {% set selectedNav = "Home" %}
 {% set pageName = "Homepage" %}
-{% set pageDescription = ""%}
+{% set pageDescription = "Guidance and information for any product manager working in the Department for Education. "%}
 {% set mainClasses = "govuk-!-padding-bottom-0 govuk-!-padding-top-0" %}
+
+{% block hero %}
+<section class="dfe-page-hero">
+   <div class="dfe-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-font-size-80">Product management</h1>
+            <p class="govuk-body-l">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
 
 {% block content %}
 
+
+<section style="background: #ffffff;">
+    <div class="dfe-width-container">
+       <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+             <div class="dfe-grid-container dfe-grid-container--wider">
+                <div class="dfe-card">
+                   <div class="dfe-card-container">
+                      <h2 class="govuk-heading-l">
+                         <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/new-starters">Information for new starters</a>
+                      </h2>
+                      <p>Information for anybody joining DfE as a civil servant or contractor product managers.</p>
+                     </div>
+                  </div>
+                  <div class="dfe-card">
+                    <div class="dfe-card-container">
+                       <h2 class="govuk-heading-l">
+                          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/guidance">Guidance</a>
+                       </h2>
+                       <p>Guidance for product managers at the Department for Education.</p>
+                    </div>
+                 </div>
+                </section>
+                 
+                <section class="dfe-section govuk-!-margin-top-0 govuk-!-margin-bottom-9">
+      <div class="dfe-width-container">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <div class="dfe-banner  govuk-!-margin-top-5">
+                  <div class="dfe-banner__content-container">
+                     <div class="dfe-banner__inner-content-container">
+                        <h2 class="govuk-heading-l">
+                           <a class="govuk-link govuk-link--no-visited-state" href="/community">Community</a>
+                        </h2>
+                        <p>Our people, meetups, and how we're developing product management capability across the department.</p>
+                       
+                     </div>
+                  </div>
+                  <div class="dfe-banner__image-container">
+                     <figure class="dfe-a-image dfe-a-image--cover">
+                        <picture class="dfe-a-image__picture">
+                           <img src="/assets/images/community-mission-patch.png"  alt="Mission patch of a mountain goat looking toward the North Star" style="width:200px">
+                        </picture>
+                     </figure>
+                  </div>
+               </div>
+   
+            </div>
+         </div>
+      </div>
+   </section> 
 {% endblock %}
