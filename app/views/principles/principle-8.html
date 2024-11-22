@@ -1,0 +1,46 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 8" %}
+{% set pageDescription = "We help raise the bar for product management. We help people where we can and are not aftaif to ask for help ourselves. We are bold."%}
+{% set sidenav = "principle 8"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+
+      <H2 class="govuk-heading-l">Raising the bar</H2>
+      <p class="govuk-body">Be an active part of the community: attend at least one session a month as a minimum.</p>
+      <p class="govuk-body">Follow and advocate for these principles and our community values.</p>
+      <p class="govuk-body">Keep having the hard conversations with stakeholders to do product in the right away everytime.</p>
+
+      <H2 class="govuk-heading-l">Help people and ask for help</H2>
+      <p class="govuk-body">Ask for feedback - show your workings and your work in progress, not always a polished presentation.</p>
+      <p class="govuk-body">Be vulnerable and contribute to making the community a safe space.</p>
+
+      <H2 class="govuk-heading-l">Be bold</H2>
+      <p class="govuk-body">Innovate. Try and fail fast.</p>
+   
+    </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}
