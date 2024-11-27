@@ -1,0 +1,47 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 2" %}
+{% set pageDescription = "We know and understand our users and customers. We act as their voice." %}
+{% set sidenav = "principle 2"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <p class="govuk-body">In DfE, our products all have users and customers. Sometimes these are the same thing, but this isn't always the case.</p>
+
+        <H2 class="govuk-heading-l">Why 'customer'?</H2>
+        <p class="govuk-body">We use the term ‘customer’ to think about those whom all our policies and services aim to benefit. This is sometimes different from users of services.</p>
+        
+        <H2 class="govuk-heading-l">What’s the difference?</H2>
+        <p class="govuk-body">Users: The people who interact with the product or service you're building.</p>
+        <p class="govuk-body">Customers: The people affected by the outcome - children, learners and those who support them such as parents or employers.</p>
+
+        <p class="govuk-body">Product Managers (PMs) need to understand and advocate for their users. We also need to understand and appreciate technical and business needs, and be able to balance them through the development of a product or service.</p>
+        <p class="govuk-body">PMs should go to user research whenever they can, and encourage all team members to make time to attend. It is invaluable.</p>
+        <p class="govuk-body">PMs should understand the life of their users outside of their service – know their context and motivation – and understand what they’re trying to achieve.</p>
+        <p class="govuk-body">PMs should consider what inclusive design looks like – how can we make this a service that everyone can use, and that works for everyone? Think about inclusion, barriers, accessibility, privacy, ethics. Does my product solve my users’ problem in the right way? Do I know what to look out for to make sure we’re making something that’s accessible and that works for everyone?</p>
+        
+      </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

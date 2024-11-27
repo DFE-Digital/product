@@ -1,0 +1,62 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 5" %}
+{% set pageDescription = "We identify our stakeholders and take them on a journey with us. We work with them, not at them."%}
+{% set sidenav = "principle 5"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <H2 class="govuk-heading-l">What we want</H2>
+        <p class="govuk-body">Our aim is to have an agreed group of stakeholders who:</p>
+        <ul class="govuk-body">
+          <li>are bought-into the product vision and roadmap</li>
+          <li>understand how digital delivery works, and who give us space to help them achieve their outcomes</li>
+          <li>aligned in their understanding of what will get done and when</li>
+          <li>engage with us at show and tells</li>
+        </ul>
+        
+        <H2 class="govuk-heading-l">How we do this</H2>
+        
+        <p class="govuk-body">You should complete a stakeholder matrix and review it regularly.</p>
+        
+        <p class="govuk-body">Get to know your stakeholders from day one.  You should actively build and maintain these relationships through shuttle diplomacy (regular 1:1 sessions with key stakeholders). Stakeholder engagement is not once and done, you should talk to them regularly.</p> 
+        
+        <p class="govuk-body">Do not assume you know what your stakeholders need.</p> 
+        
+        <p class="govuk-body">You should tailor your communications and conversation to your stakeholders. You'll need to find a common language to determine outcomes.</p>
+        
+        <p class="govuk-body">You should work collaboratively with your stakeholders. Include them in conversations about  your vision, strategy and roadmap.</p>
+        
+        <p class="govuk-body">Be transparent about with your stakeholders what the team is currently working on and why. Also let them know about well as any problems you’re encountering - do not gloss over them or not talk about them.</p>
+        
+        <p class="govuk-body">Where stakeholders are misaligned, you should address this.</p>
+        
+        <p class="govuk-body">Do not listen to stakeholder opinion over user and business needs.</p>
+        
+        <p class="govuk-body">Remain available and approachable to all colleagues,  and be receptive to new ideas.</p>
+           
+          </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

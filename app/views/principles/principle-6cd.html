@@ -1,0 +1,48 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 6" %}
+{% set pageDescription = "We do the hard work so that everyone on our team knows whats expected of"%}
+{% set sidenav = "principle 6"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+  <p class="govuk-body">Working in a multi disciplinary team can be tough.  You should work with your delivery manager (DM) to create a positive team culture.</p>
+  <p class="govuk-body">Building trust with your DM and wider team will help. Let them know that you take responsibility for risks that the team take, and that you will deal with the consequences it's the wrong decision.</p>
+  <p class="govuk-body">Follow best practice to create the best product you can. You should address problems as they arise and model the positive culture that you want to see on your team.</p>  
+  
+  <H2 class="govuk-heading-l">Doing things right</H2>
+  
+  <p class="govuk-body">We're responsible for making sure that things are done in the right way. You should know enough about each discipline to be able to make an intelligent challenge.</p>
+  <p class="govuk-body">Make sure the team are aware of the standards they have to meet including:</p>
+  <ul class="govuk-body">
+  <li>  <a href="https://www.gov.uk/service-manual/service-standard">The Service Standard</a></li>
+  <li> <a href="https://accessibility.education.gov.uk/standards">accessibility standards</a></li>
+  <li> <a href="https://www.gov.uk/guidance/the-technology-code-of-practice">The Technology Code of Practice</a></li>
+  <li> <a href="https://standards.education.gov.uk/">DfE Standards</a></li>
+</ul>
+  
+    </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

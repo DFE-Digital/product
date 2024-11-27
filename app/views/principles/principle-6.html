@@ -1,0 +1,39 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 6" %}
+{% set pageDescription = "We do the hard work so that everyone on our team knows whats expected of"%}
+{% set sidenav = "principle 6"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+<p class="govuk-body">Working in a multi disciplinary team can be tough. Whilst a lot of work on team dynamics sits with the Delivery Manager (DM), Product Managers should also be willing to roll up their sleeves and get involved.</p>
+<p class="govuk-body">Building trust with your DM and wider team will help. Make sure they know that you are the one making the bet, and that you will pick up any flak if it's the wrong decision.</p>
+<p class="govuk-body">We're responsible for making sure that things are done in the right way – so know enough about each discipline to be able to make the intelligent challenge.</p>
+<p class="govuk-body">Make sure the team are aware of the<a href="https://www.gov.uk/service-manual/service-standard">Service Standard</a>, <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a>, <a href="https://www.gov.uk/guidance/the-technology-code-of-practice"> Technology Code of Practice</a> and <a href="https://standards.education.gov.uk/">DfE Standards</a> that they have to meet.</p>
+<p class="govuk-body">Drive best practice to create the best product you can. Address problems as they arise and model the positive culture that you want to see on your team.</p>
+
+    </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

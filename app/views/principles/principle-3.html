@@ -1,0 +1,39 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 3" %}
+{% set pageDescription = "We deliver outcomes, not outputs. We're accountable for them. We make sure they're measurable, attainable and valuable"%}
+{% set sidenav = "principle 3"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <p class="govuk-body">We need to understand, and be able to articulate, what value we expect to achieve with the work we’re doing. And we need to know if that value is actually added. What difference have we made? And is it making things better? </p>
+        <p class="govuk-body">We need to be able to measure our services. The service standard sets our basic KPIs, but you should not be limited to them If the ones in the service standard aren’t relevant, you need to show you’ve considered them and justify why they’re not. </p>
+        <p class="govuk-body">Take the time to identify what KPIs and business metrics will be relevant for your product or service. Make sure your metrics are useful and support your service. Don’t report on too many.</p>
+        <p class="govuk-body">Remember that just because you’re collecting a piece of data, it doesn’t need to feed into a KPI. </p>
+        <p class="govuk-body">Consider the repercussions of your service – think about what bad looks like as well as what good looks like, and make sure you’ve got data on both.</p>
+        
+      </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 7" %}
+{% set pageDescription = "We're evidence led. We do not let our own preferences guide our thinking. We know our products better than anyone."%}
+{% set sidenav = "principle 7"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+<p class="govuk-body">When making a decision, you should:</p>
+<ul class="govuk-body">
+  <li>understand the context - knowing your product and the space you're operating in will help you to make better decisions</li>
+  <li>consider the risk - you might not have enough evidence, but taking a well-informed risk might be better than continuing to wait</li>
+  <li>use evidence to rationalise - which comes in many forms including user needs, business needs and data</li>
+</ul>
+
+<H2 class="govuk-heading-l">Data</H2>
+<p class="govuk-body">You should try to use data from a range of sources. Data we have access to includes:</p>
+<ul class="govuk-body">
+  <li>data from existing services</li>
+  <li>social research data</li>
+  <li>qualitative data such as user research data</li>
+  <li>quantitative data such as performance analytics</li>
+</ul>
+   
+<p class="govuk-body">You should use the data to make your decisions, or arrive at your hypothesis for change. The data will not give you all of the answers, but it will help you to back up the decision you make. </p>
+    </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}

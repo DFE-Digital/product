@@ -1,0 +1,84 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 4" %}
+{% set pageDescription = "We align and prioritise our work towards the outcomes, using a roadmap."%}
+{% set sidenav = "principle 4"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+        <H2 class="govuk-heading-l">Prioritisation: using evidence for strategic decision making</H2>
+        
+        <H3 class="govuk-heading-m">Why do we do this?</H3>
+        <ul class="govuk-body">
+           <li>To deliver value and meet user needs as early as possible by prioritising value dense work</li>
+           <li>To ensure a shared understanding of the work that is required</li>
+           <li>To consider and balance risks and dependencies</li>
+           <li>Confirms that deliverables are worth the effort</li>
+           <li>To make sure our work aligns to organizational dependencies</li>
+        </ul>
+
+        <H3 class="govuk-heading-m">How to approach it</H3>
+        <ul class="govuk-body">
+           <li>Listen to users</li>
+           <li>Use all available evidence to understand the full view</li>
+           <li>Use an appropriate framework so you can justify the priority order</li>
+           <li>Engage all stakeholders to understand the value and aims</li>
+           <li>Ensure access to the relevant SMEs</li>
+           <li>Make data-driven decisions</li>
+           <li>Work towards the team being aligned in prioritisation decisions</li>
+           <li>The work required for sizing/estimation must be proportional to the task</li>
+           <li>Business benefit/value must be considered alongside user need​</li>
+           <li>Prioritisation can be collaborative, but ensure the Product Manager has full responsibility for final decisions.</li>
+        </ul>
+
+        <H2 class="govuk-heading-l">Roadmapping</H2>
+        <p class="govuk-body">A roadmap is a prioritised sequence of outcomes that deliver the product strategy, realising value early, in the most effective way. It is part of your storytelling about what you’re doing and why.</p>
+        <p class="govuk-body">Ideally it should be made up of measurable, outcome items, and be used to facilitate conversations with stakeholders.</p>
+
+        <H3 class="govuk-heading-m">It should</H3>
+        <ul class="govuk-body">
+           <li>Use time horizons - Now (0-3 months), Next (3 to 6 months), Later (6 months+) with milestones only where necessary</li>
+           <li>Be outcome based (with an understanding of measurement)</li>
+           <li>Be clear and concise, written in plain English with minimal use of jargon and acronyms</li>
+           <li>Be In an accessible format</li>
+           <li>Stand on its own</li>
+           <li>Be reviewed monthly, updated at least quarterly</li>
+           <li>Be a collaborative document</li>
+           <li>Be owned by the Product Manager</li>
+           <li>Be relevant and accurate</li>
+        </ul>
+   
+        <H3 class="govuk-heading-m">What to avoid</H3>
+        <ul class="govuk-body">
+           <li>Presenting it as an absolute (things change, it is reflective of a point in time)</li>
+           <li>Delivery dates (these should be on a delivery plan)</li>
+           <li>Creating a roadmap in isolation</li>
+           <li>A list of features - (features (the how) can change, the outcome (the what) rarely does)</li>
+           <li>Creating it in isolation - this is something that your team and your stakeholders should be aware of and bought in to.</li>
+        </ul>
+
+          </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}
