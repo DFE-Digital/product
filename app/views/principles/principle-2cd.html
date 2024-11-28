@@ -1,0 +1,54 @@
+{% extends "layouts/full.html" %}
+
+{% set selectedNav = "Principles" %}
+{% set pageName = "Principle 2" %}
+{% set pageDescription = "We know and understand our users and customers. We act as their voice." %}
+{% set sidenav = "principle 2"%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-padding-top-5">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+  {%include 'principles/_sidenav.html'%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+
+        <H2 class="govuk-heading-l">Customers and users</H2>
+        <p class="govuk-body">Our products all have users and customers. Sometimes these are the same thing, but this isn't always the case.</p>
+        <p class="govuk-body">Users are the people who interact with the product or service you're building.</p>
+        <p class="govuk-body">Customers are the people who are affected by the outcome - they benefit from the policy or service. The customers are sometimes different people from the users of the service.  </p>
+        <p class="govuk-body">At the Department for Education, our customers may be children, learners and those who support them such as parents or employers. </p>
+        
+        <H2 class="govuk-heading-l">Know your users</H2>
+        <p class="govuk-body">As product Managers, we need to understand and advocate for our users and their needs. We also need to understand technical and business needs.  We need to balance balance the 2 sets of needs through the development of a product or service.</p>
+        <p class="govuk-body">Attending user research sessions is an invaluable way to understand your users. You should attend whenever you can and encourage all team members to do the same. </p>
+        <p class="govuk-body">You should understand the life of your users outside of your service. You should know their context and motivation, and understand what they’re trying to achieve.</p>
+
+        <H2 class="govuk-heading-l">Inclusive design</H2>
+        <p class="govuk-body">You should consider what inclusive design looks like.  Think about inclusion, barriers, accessibility, privacy and ethics.</p>
+        <p class="govuk-body">Ask yourself:</p>
+        <ul class="govuk-body">
+          <li>how can we make a service that everyone can use, and that works for everyone?</li>
+          <li>does my product solve my users’ problem in the right way?</li>
+          <li>do I know what to look out for to make sure we’re making something that’s accessible and that works for everyone?</li>
+        </ul>
+        
+      </div> 
+    </div> 
+    </div>
+  </div>
+{% endblock %}
