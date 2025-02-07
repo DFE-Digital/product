@@ -18,7 +18,6 @@ const session = require('express-session');
 const favicon = require('serve-favicon');
 const PageIndex = require('./middleware/pageIndex');
 const pageIndex = new PageIndex(config);
-const NotifyClient = require('notifications-node-client').NotifyClient;
 const airtable = require('airtable');
 const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
 const app = express();
@@ -26,7 +25,6 @@ const axios = require('axios');
 
 app.use(compression());
 
-const notify = new NotifyClient(process.env.notifyKey);
 
 async function trackSearchTerm(searchTerm) {
   const measurementId = process.env.GAProperty;
@@ -267,26 +265,6 @@ function makeFormDataGlobal(req, res, next) {
 app.use(saveFormDataToSession);
 app.use(makeFormDataGlobal);
 
-app.post('/submit-feedback', (req, res) => {
-  const feedback = req.body.feedback_form_input;
-  const fullUrl = req.headers.referer || 'Unknown';
-
-  //Send to notify after validation with recaptcha first
-  //TODO: Implement recaptcha
-
-  notify
-    .sendEmail(process.env.feedbackTemplateID, 'design.ops@education.gov.uk', {
-      personalisation: {
-        feedback: feedback,
-        page: fullUrl,
-        service: 'Design Manual',
-      },
-    })
-    .then((response) => { })
-    .catch((err) => console.log(err));
-
-  return res.sendStatus(200);
-});
 
 
 app.get(/\.html?$/i, function (req, res) {
