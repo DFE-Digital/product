@@ -1,7 +1,7 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Cookie policy" %}
-{% set pageDescription = "Cookie policy for the Department for Education accessibility manual" %}
+{% set pageDescription = "Cookie policy for the Department for Education product management manual" %}
 {% set selectedNav = "Home" %}
 {% set setSelectedSideNav = "" %}
 {% set backlog_issue_id = "" %}
@@ -96,52 +96,64 @@
         </form>
     </div>
 
+    <script>
+        // check if the cookie-preferences cookie exists
+        if (document.cookie.indexOf("cookie-preferences") !== -1) {
+            // get the value of the cookie
+            var cookieValue = JSON.parse(getCookie("cookie-preferences"));
 
-
-<script>
-    // check if the cookie-preferences cookie exists
-    if (document.cookie.indexOf("cookie-preferences") !== -1) {
-        // get the value of the cookie
-        var cookieValue = JSON.parse(getCookie("cookie-preferences"));
-
-        // check if the analytics preference is set to "on"
-    if (cookieValue.analytics === "on") {
-            // set the "analytics-cookies-yes" radio button to be checked by default
-            document.getElementById("analytics-cookies-yes").checked = true;
-        } else {
-            // set the "analytics-cookies-no" radio button to be checked by default
-            document.getElementById("analytics-cookies-no").checked = true;
-        }
-    }
-
-    // function to get the value of a cookie
-    function getCookie(name) {
-        var value = "; " + document.cookie;
-        var parts = value.split("; " + name + "=");
-        if (parts.length === 2) {
-            return parts.pop().split(";").shift();
-        }
-    }
-
- var cookieForm = document.querySelector('.js-cookie-setting-form');
-    cookieForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // check which radio button is checked
-        var analyticsCookies = document.querySelector('input[name="analytics-cookies"]:checked').value;
-
-        // delete all cookies if "No" radio button is checked
-        if (analyticsCookies === "0") {
-            var cookies = document.cookie.split(";");
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i];
-                var eqPos = cookie.indexOf("=");
-                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+            // check if the analytics preference is set to "on"
+            if (cookieValue.analytics === "on") {
+                // set the "analytics-cookies-yes" radio button to be checked by default
+                document
+                    .getElementById("analytics-cookies-yes")
+                    .checked = true;
+            } else {
+                // set the "analytics-cookies-no" radio button to be checked by default
+                document
+                    .getElementById("analytics-cookies-no")
+                    .checked = true;
             }
-        } 
+        }
 
-        // submit the form
-        cookieForm.submit();
-    });
-</script>{% endblock %}
+        // function to get the value of a cookie
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) {
+                return parts
+                    .pop()
+                    .split(";")
+                    .shift();
+            }
+        }
+
+        var cookieForm = document.querySelector('.js-cookie-setting-form');
+        cookieForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // check which radio button is checked
+            var analyticsCookies = document
+                .querySelector('input[name="analytics-cookies"]:checked')
+                .value;
+
+            // delete all cookies if "No" radio button is checked
+            if (analyticsCookies === "0") {
+                var cookies = document
+                    .cookie
+                    .split(";");
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i];
+                    var eqPos = cookie.indexOf("=");
+                    var name = eqPos > -1
+                        ? cookie.substr(0, eqPos)
+                        : cookie;
+                    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+                }
+            }
+
+            // submit the form
+            cookieForm.submit();
+        });
+    </script>
+{% endblock %}
