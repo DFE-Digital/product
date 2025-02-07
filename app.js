@@ -195,7 +195,7 @@ if (config.env !== 'development') {
 // Route for handling Yes/No feedback submissions
 app.post('/form-response/helpful', (req, res) => {
   const { response } = req.body;
-  const service = "Design manual";
+  const service = "Product manual";
   const pageURL = req.headers.referer || 'Unknown';
   const date = new Date().toISOString();
 
@@ -220,7 +220,7 @@ app.post('/form-response/helpful', (req, res) => {
 app.post('/form-response/feedback', (req, res) => {
   const { response } = req.body;
 
-  const service = "Design manual"; // Example service name
+  const service = "Product manual"; // Example service name
   const pageURL = req.headers.referer || 'Unknown'; // Attempt to capture the referrer URL
   const date = new Date().toISOString();
 
