@@ -6,57 +6,60 @@
 {% set mainClasses = "govuk-!-padding-bottom-0 govuk-!-padding-top-0" %}
 
 {% block hero %}
-<section class="dfe-page-hero">
-   <div class="dfe-width-container">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk">Product management manual</h1>
-            <p class="govuk-body-l">{{pageDescription}}</p>
+   <section class="dfe-page-hero">
+      <div class="dfe-width-container">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+               <h1 class="govuk-heading-xl govuk">Product management manual</h1>
+               <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
          </div>
       </div>
-   </div>
-</section>
+   </section>
 {% endblock %}
-
 
 {% block content %}
 
+   <section style="background: #ffffff;" class="govuk-!-margin-top-9">
+      <div class="dfe-width-container">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <div class="dfe-grid-container dfe-grid-container--wider">
 
-<section style="background: #ffffff;" class="govuk-!-margin-top-9">
-    <div class="dfe-width-container">
-       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-             <div class="dfe-grid-container dfe-grid-container--wider">
-                  
                   <div class="dfe-card">
-                    <div class="dfe-card-container">
-                       <h2 class="govuk-heading-l">
-                          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/principles">Principles</a>
-                       </h2>
-                       <p>How we deliver our best work.</p>
-                    </div>
-                 </div>
-                 
-                 <div class="dfe-card">
-                    <div class="dfe-card-container">
-                       <h2 class="govuk-heading-l">
-                          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/community/values">Values</a>
-                       </h2>
-                       <p>The characteristics that we aspire to as product managers.</p>
-                    </div>
-                 </div>
+                     <div class="dfe-card-container">
+                        <h2 class="govuk-heading-l">
+                           <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/principles">Principles</a>
+                        </h2>
+                        <p>The 8 principles we for how we're delivering our best work.</p>
+                     </div>
+                  </div>
 
-                <div class="dfe-card">
-                  <div class="dfe-card-container">
-                     <h2 class="govuk-heading-l">
-                        <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/new-starters">Information for new starters</a>
-                     </h2>
-                     <p>Information for anybody joining DfE as a civil servant or contractor product manager.</p>
-                    </div>
-                 </div>
-               </section>
-                 
-                <section class="dfe-section govuk-!-margin-top-0 govuk-!-margin-bottom-9">
+                  <div class="dfe-card">
+                     <div class="dfe-card-container">
+                        <h2 class="govuk-heading-l">
+                           <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/community/values">Values</a>
+                        </h2>
+                        <p>The characteristics that we aspire to as product managers.</p>
+                     </div>
+                  </div>
+
+                  <div class="dfe-card">
+                     <div class="dfe-card-container">
+                        <h2 class="govuk-heading-l">
+                           <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/new-starters">New starters</a>
+                        </h2>
+                        <p>Information for anybody joining DfE as a civil servant or contractor product manager.</p>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="dfe-section govuk-!-margin-top-0 govuk-!-margin-bottom-9">
       <div class="dfe-width-container">
          <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
@@ -64,7 +67,7 @@
                   <div class="dfe-banner__content-container">
                      <div class="dfe-banner__inner-content-container">
                         <h2 class="govuk-heading-l">
-                           <a class="govuk-link govuk-link--no-visited-state" href="/community">Community</a>
+                           <a class="govuk-link govuk-link--no-visited-state" href="/community/">Community</a>
                         </h2>
                         <p>Our people, meetups, and how we're developing product management capability across the department.</p>
                        
@@ -73,7 +76,8 @@
                   <div class="dfe-banner__image-container">
                      <figure class="dfe-a-image dfe-a-image--cover">
                         <picture class="dfe-a-image__picture">
-                           <img src="/assets/images/community-mission-patch-transparent.png"  alt="Mission patch of a mountain goat looking toward the North Star" style="width:200px">
+                           <source srcset="/assets/images/sticker.webp" type="image/webp">
+                           <img src="/assets/images/sticker.png" alt="Badge showing an otter with a magnifying glass, surrounded by the words 'Department for Education User Research Community'">
                         </picture>
                      </figure>
                   </div>
@@ -82,5 +86,6 @@
             </div>
          </div>
       </div>
-   </section> 
+   </section>
+
 {% endblock %}
